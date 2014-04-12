@@ -24,7 +24,7 @@
         <form id="file-attachment-form" action="http://www.siriowebsolutions.com/audiosliderecorder/android/api/upload/audio">
 
             <div data-role="fieldcontain">
-                <label for="data">Put some text:</label>
+                <label for="data">Username:</label>
                 <input name="name" type="text" id="data"/>
             </div>
 
@@ -50,8 +50,9 @@
                 error:function (jqXHR, textStatus, errorThrown) {
                     alert('Failed to upload file')
                 },
-                success:function () {
-                    alert('File uploaded')
+                success:function (data) {
+                    alert(data.message)
+					
                 }
             })
 
